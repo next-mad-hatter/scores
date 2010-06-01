@@ -9,8 +9,8 @@
 
 \header {
   title = "Kein Schwein ruft mich an"
-  subtitle = ""
-  subsubtitle = "in C major"
+  %subtitle = "+8va"
+  subsubtitle = "+8va" %"in C major"
 
   composer = "Max Raabe & Co"
   poet = ""
@@ -18,7 +18,7 @@
 
   meter = "133 bpm"
   piece = "tango"
-  version = "$Revesion"
+  version = "$Revision"
 
   copyright = "Transcribed by MaX"
   tagline = "" % or leave the lilypond line
@@ -44,11 +44,12 @@ harm = \chords {
 
   \repeat volta 2 {
     c1:6 s as:maj a:7
-    \mark \markup { \musicglyph #"scripts.coda" }
-    d:7 g:7
+    %\mark \markup { \musicglyph #"scripts.coda" }
+    d:9
+    g:7
   }
   \alternative {
-    { c2 cis:dim | d4:7 g2.:7 | }
+    { c2 cis:dim | d4:9 g2.:7 | }
     { c2 g:7 | }
   }
   c1:6 |
@@ -59,16 +60,18 @@ harm = \chords {
   }
   \alternative {
     { s1 }
-    { d2:7 g:7 }
+    { d2:9 g:7 }
   }
   g1:7
 
   \mark \markup {\box \bold "A"}
   c1:6 s as:maj a:7
-  d:7 g:7
-  c2.
+  d:9 g:7
+  %c2.
+  %\mark \markup {\bold "D. S."}
+  %s4
+  c1
   \mark \markup {\bold "D. S."}
-  s4
   s1
   \mark \markup {\box \bold "I2"}
 
@@ -81,7 +84,7 @@ harm = \chords {
     \repeat percent 2 {
       a1:m e:7
     }
-    c2 e:m a1:7 d:m
+    c2 e:maj e:m a:7 d1:m
   }
   \alternative {
     { g2:7 e:7 }
@@ -96,12 +99,12 @@ harm = \chords {
   }
 
   \mark \markup { \musicglyph #"scripts.coda" }
-  d:7 g:7
+  d:9 g:7
   c2 g:7 | c1:6 |
 
 }
 
-mel = \relative c''' {
+mel = \relative c'' {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
@@ -122,33 +125,35 @@ mel = \relative c''' {
   r4_\markup {\italic "break"} g, \times 2/3 { a c e } |
   \repeat volta 2 {
     a1 | r4 g8 a c a g e |
-    \times 2/3 { es4 es g } es2 |
+    \times 2/3 { es4 es as } es2 |
     r4 r8 e g8 e g e |
-    d2 g8 e g e |
+    d2^\markup {\small \italic { \hspace #-5.0 \bold {al coda} (rec) }}
+    g8 e g e |
     d2 g8 e g e |
   }
   \alternative {
     { a,2 r2 | r4 g \times 2/3 { a c e } | }
     { c2 r2 | }
   }
-  r2 r4 d |
+  r2 r4 c |
 
   \repeat volta 2 {
-    d4. f8 f4 as | as4. c8 d4 c | as2 g
+    c4. d8 d4 f | as4. c8 d4 c | as2 g
   }
   \alternative {
-    { r2 r4 d } { r1 }
+    { r1 } { r1 }
   }
 
   r4_\markup {\italic "break"} g, \times 2/3 { a c e } |
   a1 | r4 g8 a c a g e |
-  \times 2/3 { es4 es g } es2 |
+  \times 2/3 { es4 es as } es2 |
   r4 r8 e g8 e g e |
-  d2 g8 e g e |
-  d2 g8 e g e |
+  d4.^\markup {\small \italic { \hspace #-5.0 \bold {al coda} (sidestep)}}
+  e8 g e g e |
+  d4. e8 g e g e |
   c2 r2 |
 
-  r4 g'8_\f a c a g e |
+  r4 g'8_\f a \times 2/3 { c4 a g8 e } |
   b'1 | r4 a8 b d c b a |
   e'2 ~ \times 2/3 { e4 f e |
   d c a } f4 d |
@@ -175,8 +180,9 @@ mel = \relative c''' {
   \break
   d2 g8 e g e |
   d2 g8 a g a |
-  c4 r8 bes a4 g |
-  c4 r
+  %c4 r8 bes a4 g |
+  %c4 r
+  c1 ~ | c4 r4
   \override NoteHead #'style = #'diamond
   c,4-> r |
 
