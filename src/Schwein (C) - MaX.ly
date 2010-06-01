@@ -18,7 +18,7 @@
 
   meter = "133 bpm"
   piece = "tango"
-  version = "$Revision"
+  version = "$HGRevision$"
 
   copyright = "Transcribed by MaX"
   tagline = "" % or leave the lilypond line
