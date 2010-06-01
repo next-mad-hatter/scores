@@ -49,7 +49,7 @@ harm = \chords {
     g:7
   }
   \alternative {
-    { c2 cis:dim | d4:9 g2.:7 | }
+    { c2 cis:m7.5- | d4:9 g2.:7 | }
     { c2 g:7 | }
   }
   c1:6 |
