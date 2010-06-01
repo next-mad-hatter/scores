@@ -1,0 +1,8 @@
+syntax: glob
+
+pdf/*.pdf
+pdf/*.ps
+src/*.pdf
+src/*.ps
+*~
+*.swp
