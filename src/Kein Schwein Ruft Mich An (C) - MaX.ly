@@ -84,7 +84,7 @@ harm = \chords {
     \repeat percent 2 {
       a1:m e:7
     }
-    c2 e:maj e:m a:7 d1:m
+    c2 c:maj e:m a:7 d1:m
   }
   \alternative {
     { g2:7 e:7 }
@@ -148,7 +148,7 @@ mel = \relative c'' {
   a1 | r4 g8 a c a g e |
   \times 2/3 { es4 es as } es2 |
   r4 r8 e g8 e g e |
-  d4.^\markup {\small \italic { \hspace #-5.0 \bold {al coda} (sidestep)}}
+  d4.^\markup {\small \italic { \hspace #-5.0 \bold {al coda} (sidestep) - cue?}}
   e8 g e g e |
   d4. e8 g e g e |
   c2 r2 |
