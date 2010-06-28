@@ -1,11 +1,11 @@
 \version "2.12.3"
 
 %
-% $file$
-% $date$
-% $revision$
-% $author: $
-% $id$
+% $File$
+% $Date$
+% $Revision$
+% $Author$
+% $Id$
 %
 
 \header {
