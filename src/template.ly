@@ -5,7 +5,6 @@
 % $Date$
 % $Revision$
 % $Author$
-% $Source$
 %
 
 \header {
