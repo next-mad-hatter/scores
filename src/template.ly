@@ -1,10 +1,10 @@
 \version "2.12.3"
 
 %
-% $HGFile$
-% $HGDate$
-% $HGRevision$
-% $HGAuthor$
+% $HGFile $
+% $HGDate $
+% $Revision $
+% $Author $
 %
 
 \header {
