@@ -2,7 +2,7 @@
 
 %
 % $File$
-% $HGDate: Tue, 01 Jun 2010 00:41:20 +0200 $
+% $Date$
 % $Revision$
 % $Author$
 %
