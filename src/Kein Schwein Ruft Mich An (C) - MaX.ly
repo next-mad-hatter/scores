@@ -1,10 +1,10 @@
 \version "2.12.3"
 
 %
-% $File: Oj Oj Oj (Am).ly $
+% $File$
 % $HGDate: Tue, 01 Jun 2010 00:41:20 +0200 $
-% $Revision: 12b80a989873 $
-% $Author: Max Deineko <max.deineko@gmail.com> $
+% $Revision$
+% $Author$
 %
 
 \header {
