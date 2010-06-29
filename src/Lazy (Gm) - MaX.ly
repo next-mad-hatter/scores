@@ -233,6 +233,35 @@ mel = \relative c' {
   }
 }
 
+\markup {
+  \normalsize { % \teeny \tiny \small \normalsize \large \huge
+                % are all viable options here, with \normalsize
+                % the default. Pick whatever looks good.
+    \fill-line { % This centers the words, which looks nicer
+      \hspace #1.0 % gives the fill-line something to work with
+      \column {
+        \hspace #1.0
+        \hspace #1.0
+        \hspace #1.0
+        \hspace #1.0
+        "You're lazy just stay in bed; you're lazy just stay in bed"
+        "You don't want no money you don't want no bread"
+        \hspace #1.0
+        "If you're drowning you don't clutch no straw; if you're drowning you don't clutch no straw"
+        "You don't want to live you don't want to cry no more"
+        \hspace #1.0
+        "Well my trying ain't done no good; I said my trying ain't done no good"
+        "You don't make no effort no not like you should"
+        \hspace #1.0
+        "Lazy you just stay in bed; lazy you just stay in bed"
+        "You don't want no money you don't want no bread"
+
+      }
+      \hspace #1.0 % gives the fill-line something to work with
+    }
+  }
+}
+
 \layout {
   ragged-last = ##t
 }
