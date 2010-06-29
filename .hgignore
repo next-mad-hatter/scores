@@ -4,5 +4,9 @@ pdf/*.pdf
 pdf/*.ps
 src/*.pdf
 src/*.ps
+*.flac*
+*.ogg*
+*.mp3*
+*.wav*
 *~
 *.swp
