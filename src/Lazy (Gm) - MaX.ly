@@ -38,7 +38,7 @@ harm = \chords {
   bes1 f:m
 
   \repeat volta 2 {
-    R1 * 4
+    R1 * 2
   }
 
   %\mark \markup {\italic "cue"}
@@ -56,14 +56,14 @@ harm = \chords {
   f1:m s s s
   c s s s
 
-  %\break
+  \break
   \mark \markup {\box \bold "B1"}
 
   f:m s s s
   bes:m s f:m s
   as es f:m f2:m c:9+
 
-  %\break
+  \break
   \mark \markup {\box \bold "A2"}
 
   f1:m s s2 s1
@@ -71,21 +71,21 @@ harm = \chords {
   c s s s
   d s
 
-  %\break
+  \break
   \mark \markup {\box \bold "B2"}
 
   g:m s s s
   c:m s g:m s
   bes f g:m g2:m d:9+
 
-  %\break
+  \break
   \mark \markup {\box \bold "A3"}
 
   a1:m s s2 s1
   a1:m s s s
   e s s s
 
-  %\break
+  \break
   \mark \markup {\box \bold "B3"}
 
   a:m s s s
@@ -105,7 +105,7 @@ harm = \chords {
     { a1.:m }
   }
 
-  %\break
+  \break
 
   e1.:7 d
   a
@@ -130,7 +130,7 @@ mel = \relative c' {
   b8-> bes-> r2. r1
 
   \repeat volta 2 {
-    R1 * 4^\markup {\italic "till cue"}
+    R1 * 2^\markup {\italic "till cue"}
   }
 
   \override NoteHead #'style = #'default
@@ -189,7 +189,7 @@ mel = \relative c' {
 
   \repeat volta 2 {
     s1 * 10_\markup{\italic { backbeat } }
-    s1 * 2^\markup{\italic { solo till cue el coda } }
+    s1 * 2^\markup{\italic { solo till cue into coda } }
   }
 
   \repeat volta 3 {
