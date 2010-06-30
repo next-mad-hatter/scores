@@ -16,8 +16,8 @@
   poet = ""
   enteredby = "Max Deineko"
 
-  meter = "108 bpm"
-  %piece = "rock"
+  meter = "108 bpm shuffle groove rock"
+  %piece = "shuffle groove rock"
   version = "$Revision$"
 
   copyright = "Transcribed by MaX"
@@ -34,19 +34,17 @@
           \line{
             \hspace #0.5
             \smallCaps Form:
-            Intro R
+            Intro
             \huge \bold |
-            ABR
+            A BC A BC A
             \huge \bold |
-            ABR
+            D + \small{solos on} A
             \huge \bold |
-            C + \small{solos on} R + R{\tiny{\dynamic{mp}}}
+            [AB]{\tiny{\dynamic{mp}}}C A
+            %A{\tiny{\dynamic{mp}}} B{\tiny \dynamic mp}C A
+            BC A
             \huge \bold |
-            A{\tiny \dynamic mp}BR
-            \huge \bold |
-            ABR
-            \huge \bold |
-            R\italic{\small{(cue?)}} C\italic{\small{(fine)}}
+            A\italic{\small{(cue?)}} D\italic{\small{(fine)}}
             \hspace #0.5
           }
         }
@@ -60,20 +58,20 @@ harm = \chords {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
 
-  \mark \markup {\box \bold "Intro"}
+  % \mark \markup {\box \bold "Intro"}
 
   e1:m
   s1 s s
 
   %\mark \markup{ \musicglyph #"scripts.segno" }
   \break
-  \mark \markup {\box \bold "R"}
+  \mark \markup {\box \bold "A"}
 
   e2:m r8 a r16 g r e:m
   r2   r8 a r16 g r r
 
   \break
-  \mark \markup {\box \bold "A"}
+  \mark \markup {\box \bold "B"}
 
   e2:m r8 a r16 g r e:m
   r2   r8 a r16 g r r
@@ -82,7 +80,7 @@ harm = \chords {
   r2 r16 a8 bes b r16
 
   \break
-  \mark \markup {\box \bold "B"}
+  \mark \markup {\box \bold "C"}
 
   b2 s16 a8 e16 r4
   b2 s16 d8 a16 r4
@@ -90,13 +88,16 @@ harm = \chords {
   b1
 
   \break
-  \mark \markup {\box \bold "C"}
+  \mark \markup {\box \bold "D"}
 
-  d1 c4 f2 c4
-  d1 c2 f4 c
-  d1 c4 r8. g2
+  d2. s8. c16
+  s4 f2 c8. d16
+  s2. s8. c16
+  s2 f4 c8. d16
+  s2. s8. c16
+  s2 g2
   a1
-  b2:75+ s4 s8 e16:m
+  b2:7.9+ s4 s8 e16:m
 
 }
 
@@ -108,7 +109,7 @@ mel = \relative c' {
   \key e \minor
   \time 4/4
 
-  \override NoteHead #'font-size = #-1
+  \override NoteHead #'font-size = #-2
   \times 2/3 {
     e8 %_\markup{\italic{gtr: sim.}}
     \override NoteHead #'style = #'cross
@@ -164,8 +165,10 @@ mel = \relative c' {
   }
   \override NoteHead #'style = #'default
   \override NoteHead #'font-size = #0
-  e,8 %_\markup{\italic{fill}}
-  e' d cis b bes a g16 e ~
+  %\times 2/3 { e,8 e' } %_\markup{\italic{fill}}
+  e,16 e'
+  r8
+  cis c b bes a g16 e ~
   \repeat volta 2 {
     e8 g e g e a r16 g r e ~
     e8 g e g e a r16 g r e ~
@@ -175,22 +178,29 @@ mel = \relative c' {
     e8 g e g e a r16 g r e ~
     e8 g e g e a r16 g r e ~
     e8 g e g e a r16 g r e ~
-    e8 g e g r16 a8 bes b e,16
+    e8 g e g r16 a8 bes b
+    \parenthesize e,16
   }
 
   a8-> b dis b16 a r <cis e a>-> r <b e gis>-> ~ <b e gis>4
-  a8-> b dis b16 fis' r <a, d fis>-> r <a cis e>-> ~ <a cis e>4
+  a8-> b dis b16 fis' r <a, d>-> r <a cis>-> ~ <a cis>4
   a8-> b dis b16 a r <cis e a>-> r <b e gis>-> ~ <b e gis>4
-  a8-> b dis b16 fis' r b, r a r g r e
+  a8-> b dis b16 fis' r d r a r g r e
 
   r8 fis' a b c b a fis16 g ~
-  g4 r2 r4
-  r8 fis a b c b a fis16 g ~
-  g8 e ~ e4 r r
-  r8 fis a b c b a fis16 g ~
-  g4 ~ g8. g2 d16 ~
-  d8. d4 d4 d4 d16 ~
-  d8. d4 d8 b a g e16_\markup{\italic{fine}} ~
+  g4
+  <c, f> <c f> <c e>8. <a d>16 ~
+  <a d>8
+  fis' a b c b a fis16 g ~
+  g8 e ~ e4
+  <c f> <c e>8. <a d>16 ~
+  <a d>8
+  fis' a b c b a fis16 g ~
+  g2 <b, g'>2
+  %g4 ~ g8. g2 d16 ~
+  %d8. d4 d4 d4 d16 ~
+  <a e' a>1
+  r16 g'8.-> r16 [g8->] d8 b a g e16_\markup{\italic{fine}} |
 }
 
 \score {
