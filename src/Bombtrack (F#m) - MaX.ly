@@ -32,43 +32,28 @@ harm = \chords {
   s1 * 2
 
   \break
-  \mark \markup {\box \bold "A1"}
+  \mark \markup {\box \bold "A"}
 
   s1 * 4
 
   \break
-  \mark \markup {\box \bold "B1"}
+  \mark \markup {\box \bold "B"}
 
   s1 * 3
 
   \break
-  \mark \markup {\box \bold "A1"}
-
-  s1 * 4
-
-  \break
-  \mark \markup {\box \bold "B2"}
-
-  s1 * 3
-
-  \break
-  \mark \markup {\box \bold "A2"}
+  \mark \markup {\box \bold "A"}
 
   s1 * 4
 
   \break
   \mark \markup {\box \bold "C"}
 
-  s1 * 2
+  s1 * 4
 
   \break
-  \mark \markup {\box \bold "A2"}
-
-  s1 * 2
-
-  \break
-  \mark \markup{\box \bold "Coda"}
-  s1
+  \mark \markup { \musicglyph #"scripts.coda" }
+  s2
 
 }
 
@@ -89,80 +74,40 @@ mel = \relative c' {
 
   \key fis \minor
 
-  %
-  % A1
-  %
   \repeat volta 4 {
-    e8 fis fis' e,16 fis r e fis8 fis' e
+    e8^\markup{ \musicglyph #"scripts.segno" }
+    fis fis' e,16 fis r e fis8 fis' e
   }
   \alternative {
     { e,8 fis fis' e,16 fis r e cis'8 c b }
-    { e,8 fis fis' e,16 fis r e cis'8->^\markup{\italic break} ~ cis4 ~ }
+    { e,8 fis fis' e,16 fis r e cis'8->_\markup{\italic break} ~ cis4 ~ }
   }
   cis1
 
 
-  %
-  % B1
-  %
   \bar "|:"
   fis,8 fis e fis16 fis r fis8 fis16 a4 |
   \set Score.repeatCommands = #'((volta "1.-3., 5.-7."))
   fis8 fis e fis16 e fis' e16 cis c b a8.
   \set Score.repeatCommands = #'((volta #f) (volta "4., 8.") end-repeat)
-  fis8 fis e fis16 fis r2^\markup{\italic break}
+  fis8 fis e fis16 fis r2_\markup{\italic break}
+  ^\markup{\hspace #-6.0 D.S. upto B \hspace #-1.0 \tiny\bold4.}
   \set Score.repeatCommands = #'((volta #f))
 
 
-  %
-  % A2
-  %
-  \repeat volta 4 {
-    e8 fis fis' e,16 fis r e fis8 fis' e
+  \repeat volta 2 {
+    s4 s^\markup{ \musicglyph #"scripts.segno" } s s
+    s1^\markup{\hspace #-15.0 \italic{repeats 1.+2., then 1.+2.}}
+    s1
+    s1^\markup{\hspace #7.0 al coda}
   }
-  \alternative {
-    { e,8 fis fis' e,16 fis r e cis'8 c b }
-    { e,8 fis fis' e,16 fis r e cis'8->^\markup{\italic break} ~ cis4 ~ }
-  }
-  cis1
 
 
-  %
-  % B2
-  %
-  \bar "|:"
-  fis,8 fis e fis16 fis r fis8 fis16 a4 |
-  \set Score.repeatCommands = #'((volta "1.-3."))
-  fis8 fis e fis16 e fis' e16 cis c b a8.
-  \set Score.repeatCommands = #'((volta #f) (volta "4.") end-repeat)
-  fis8 fis e fis16 fis r2^\markup{\italic break}
-  \set Score.repeatCommands = #'((volta #f))
-
-
-  %
-  % A3
-  %
-  \repeat volta 4 {
-    e8 fis fis' e,16 fis r e fis8 fis' e
-    e,8 fis fis' e,16 fis r e cis'8 c b^\markup{\hspace #2.0 \italic{x4}}
-  }
-  e,16_\markup{\italic cresc.} e e e e e e e e e e e e e e e
+  e16_\markup{\italic cresc.} e e e e e e e e e e e e e e e
   e e e e e e e e e e e e e e e e
-
-  %
-  % C
-  %
   \repeat volta 2 {
     fis16 e fis e a8 fis16 e fis16 e fis8 r4
-    fis16 e fis e a8 fis16 e fis16 e cis' a c a b a^\markup{\hspace #-10.0 \italic{solo till cue}}
-  }
-
-  %
-  % A4
-  %
-  \repeat volta 2 {
-    e8 fis fis' e,16 fis r e fis8 fis' e
-    e,8 fis fis' e,16 fis r e cis'8 c b^\markup{\hspace #2.0 \italic{x4}}
+    fis16 e fis e a8 fis16 e fis16 e cis' a c a b a^\markup{\hspace #-24.0 \italic{solo till cue, then} D.S. \italic{al coda}}
   }
 
   r8 b bes a
