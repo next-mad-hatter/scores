@@ -1,7 +1,6 @@
 syntax: glob
 
-pdf/*.pdf
-pdf/*.ps
+pub/*
 src/*.ps
 src/*.pdf
 *.flac*
