@@ -2,6 +2,8 @@ syntax: glob
 
 pdf/*.pdf
 pdf/*.ps
+src/*.ps
+src/*.pdf
 *.flac*
 *.ogg*
 *.mp3*
