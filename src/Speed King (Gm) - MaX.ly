@@ -107,7 +107,7 @@ mel = \relative c' {
   \override NoteHead #'style = #'cross
   d'4
   \override NoteHead #'style = #'diamond
-  f,4 %^\markup{\italic{ 5-chords throughout }}
+  f,4\f %^\markup{\italic{ 5-chords throughout }}
 
   \repeat volta 4 {
     g4->_\markup{\small{\italic{3. & 4.: let }Is\italic{ring, rock bass 8ths ostinato}}}
@@ -138,21 +138,21 @@ mel = \relative c' {
   #(set-octavation 0)
   bes->^\markup { \small \bold {al coda }}
   c4_\markup{\italic{drum fill}}->
-  r2. r2. f,4->_\markup{D.S.}
+  r2. r2. f,4->_\markup{\hspace #2.0 D.S.}
 
-  g1 ~ g2. f4
-  g1 ~ g2. f4
+  g1\mf\> ~ g2. f4
+  g1 ~ g2. f4\!
 
   \repeat volta 2 {
-    s1 * 2^\markup{\hspace #-2.5 \italic{solo solo solo till cue}}
+    s1 * 2 ^\markup{\hspace #-2.5 \italic{solo solo solo till cue}} \<
     %s1^\markup{\italic{till cue}}
   }
 
-  \repeat percent 2 { d'1 ~ d }
+  \repeat percent 2 { d'1\mf\! ~ d }
   \repeat percent 2 { d4. c8 ~ c4 d ~ d1 }
   \repeat percent 2 { d4. c8 ~ c4 d ~ d8 c8 ~ c4 d c }
-  \repeat volta 2 { d,4. e8 ~ e4 f ~ f8 fis8 ~ fis4 g gis
-                    a4. bes8 ~ bes4 b ~ b8 c8 ~ c4 cis_\markup{D.S. al coda } d
+  \repeat volta 2 { d,4.\< e8 ~ e4 f ~ f8 fis8 ~ fis4 g gis
+                    a4. bes8 ~ bes4 b ~ b8 c8 ~ c4\ff\! cis_\markup{D.S. al coda } d
                   }
 
   \override NoteHead #'style = #'default
