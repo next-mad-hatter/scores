@@ -20,7 +20,7 @@
   piece = "rock"
   version = "$Revision$"
 
-  copyright = "Transcribed by MaX"
+  copyright = "Transcribed and/or arranged by MaX"
   tagline = "" % or leave the lilypond line
 }
 
