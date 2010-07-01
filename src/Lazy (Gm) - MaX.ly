@@ -61,7 +61,7 @@ harm = \chords {
 
   f:m s s s
   bes:m s f:m s
-  as es f:m f2:m c:9+
+  as es/g f:m f2:m c:9+
 
   \break
   \mark \markup {\box \bold "A2"}
@@ -76,7 +76,7 @@ harm = \chords {
 
   g:m s s s
   c:m s g:m s
-  bes f g:m g2:m d:9+
+  bes f/a g:m g2:m d:9+
 
   \break
   \mark \markup {\box \bold "A3"}
@@ -91,13 +91,13 @@ harm = \chords {
   a:m s s s
   d:m s a:m s
   \mark \markup { \musicglyph #"scripts.coda" }
-  c g a:m a2:m e:9+
+  c g/b a:m a2:m e:9+
 
   \break
 
   \mark \markup { \musicglyph #"scripts.coda" }
   \repeat volta 3 {
-    c1 g
+    c1 g/b
   }
   \alternative {
     { a1:m s }
