@@ -193,8 +193,10 @@ mel = \relative c' {
   s1_\markup{\italic{I'd walk a million miles...}}
   s1 s1
 
-  \parenthesize r2 r16 cis8-> b-> cis-> a16-> ~ a16 fis8-> fis-> fis-> fis-> r8 r4 b16-> ~
-  b4 r8. b8-> b8-> a4-> e16->~ e8-> r16 e8-> r8. r16 e-> e8-> e4 |
+  \parenthesize r2 r16 cis8-> b-> cis->
+  a16-> ~ a16 fis8-> fis-> fis-> fis-> r4. b16-> ~
+  b4 r8. b8-> b8-> a4-> e16->~
+  e16-> r8 e8-> r4 e16-> e8-> e4 |
   \break
   \repeat percent 4 {
     b'16 b b a r8 fis r16 fis8 r16 e8 fis8
