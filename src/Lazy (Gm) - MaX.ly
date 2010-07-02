@@ -137,7 +137,7 @@ mel = \relative c' {
 
   f4 as8 f bes as f es | as f bes as f r f'4-> ~
   f1 ~ f2 r
-  f4 es8 bes es4 c8 b c f c b \times 2/3 { bes as f } bes f as r f4-> ~
+  f4 es8 c es4 c8 b c f c b \times 2/3 { bes as f } bes f as r f4-> ~
   f2 ~ f1
 
   \override NoteHead #'style = #'diamond
