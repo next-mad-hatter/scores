@@ -149,12 +149,12 @@ mel = \relative c'' {
   r1
 
   \repeat percent 3 {
-    a8_\markup{\italic solo} g gis a r2
+    a8^\markup{\italic solo} g gis a r2
   }
   a,16 g' a a, g' a a, g' g a, g' a d cis c8
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r^\markup{\hspace #14.0 \italic{cue}}
+      a8 e g a c c a g a e g a c c a r^\markup{\hspace #22.0 \italic{cue}}
     }
   }
 
