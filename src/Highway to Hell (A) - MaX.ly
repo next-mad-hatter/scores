@@ -60,7 +60,7 @@ harm = \chords {
 
   a2 s4. d8
   s2 g4 d
-  a2 g4 d
+  d2 g4 d
   d1 a
 
   \bar "||"
