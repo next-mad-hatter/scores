@@ -7,5 +7,7 @@ src/*.pdf
 *.ogg*
 *.mp3*
 *.wav*
+*.mp4*
+*.MP4*
 *~
 *.swp
