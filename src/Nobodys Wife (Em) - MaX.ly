@@ -41,13 +41,13 @@ harm = \chords {
 
   \mark \markup {\box \bold "C"}
 
-  a2:m d g c
-  a2:m d g c
+  a2:m d g4. c8 s2
+  a2:m d g4. c8 s2
 
   \break
   \mark \markup { \musicglyph #"scripts.coda" }
 
-  a2:m d g c
+  a4.:m d8 s2 g4. c8 s2
 
 }
 

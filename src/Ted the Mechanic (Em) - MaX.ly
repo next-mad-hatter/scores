@@ -44,7 +44,7 @@
             %A{\tiny{\dynamic{mp}}} B{\tiny \dynamic mp}C A
             BC A
             \huge \bold |
-            A\italic{\small{(cue?)}} D\italic{\small{(fine)}}
+            A\italic{\small{(cue?)}} D Coda
             \hspace #0.5
           }
         }
@@ -70,7 +70,7 @@ harm = \chords {
   e2:m r8 a r16 g r e:m
   r2   r8 a r16 g r r
 
-  \break
+  %\break
   \mark \markup {\box \bold "B"}
 
   e2:m r8 a r16 g r e:m
@@ -97,7 +97,11 @@ harm = \chords {
   s2. s8. c16
   s2 g2
   a1
-  b2:7.9+ s4 s8 e16:m
+  b1:7.9+
+
+  \break
+  \mark \markup {\musicglyph #"scripts.coda"}
+  b2.:7.9+ s8. e16.:m s1
 
 }
 
@@ -182,10 +186,10 @@ mel = \relative c' {
     \parenthesize e,16
   }
 
-  a8-> b dis b16 a r <cis e a>-> r <b e gis>-> ~ <b e gis>4
-  a8-> b dis b16 fis' r <a, d>-> r <a cis>-> ~ <a cis>4
-  a8-> b dis b16 a r <cis e a>-> r <b e gis>-> ~ <b e gis>4
-  a8-> b dis b16 fis' r d r a r g r e
+  a8-> b dis b16 a r <\parenthesize b e a>8-> <b e gis>16-> ~ <b e gis>4
+  a8-> b dis b16 fis' r <a, d>8-> <a cis>16-> ~ <a cis>4
+  a8-> b dis b16 a r <\parenthesize b e a>8-> <b e gis>16-> ~ <b e gis>4
+  a8-> b dis b16 fis' r d8 a g e16
 
   r8 fis' a b c b a fis16 g ~
   g4
@@ -200,7 +204,12 @@ mel = \relative c' {
   %g4 ~ g8. g2 d16 ~
   %d8. d4 d4 d4 d16 ~
   <a e' a>1
-  r16 g'8.-> r16 [g8->] d8 b a g e16_\markup{\italic{fine}} |
+  r16 g'8.-> r16 [g8.->] r16 [g8.->] r16 [g8.->]
+
+  r16
+  g8.-> r16 [g8->] g d a g e16-> ~ e4 r2.
+
+  \bar "||"
 }
 
 \score {
@@ -213,5 +222,5 @@ mel = \relative c' {
 }
 
 \layout {
-  ragged-last = ##f
+  ragged-last = ##t
 }

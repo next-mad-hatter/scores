@@ -33,8 +33,8 @@ harm = \chords {
 
   \mark \markup {\box \bold "A"}
 
-  fis1:m9+ s2 s4 b4
-  fis1:m9+ s2 s4 b4
+  fis1:9+ s2 s4 b4
+  fis1:9+ s2 s4 b4
 
   \break
   \mark \markup {\box \bold "B"}
