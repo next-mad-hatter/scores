@@ -191,7 +191,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel
