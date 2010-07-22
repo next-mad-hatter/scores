@@ -154,7 +154,7 @@ mel = \relative c' {
   %
   % C
   %
-  e16_\markup{\italic cresc.} e e e e e e e e e e e e e e e
+  e,16_\markup{\italic cresc.} e e e e e e e e e e e e e e e
   e e e e e e e e e e e e e e e e
   \repeat volta 2 {
     fis16 e fis e a8 fis16 e fis16 e fis8 r4
