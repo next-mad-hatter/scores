@@ -62,7 +62,7 @@ mel = \relative c {
   \time 4/4
   \key e \minor
 
-  e8 e'16 b'8 e b16
+  e8_\markup{\italic sim.} e'16 b'8 e b16
   c,8 e16 d'8 g, \parenthesize e16
   a,8 e'16 b'8 c b16 ~
   <g, b'>8. g16 <fis fis'> a' fis d_\markup{\italic etc}

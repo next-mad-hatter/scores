@@ -78,7 +78,7 @@ mel = \relative c'' {
 
   \repeat percent 2 {
     \repeat percent 2 {
-      f8.-.-> f-.-> f-.-> f-.-> f16-> f r8
+      f8.-.-> f-.-> f8-> r f-> f16-> f r8
       %d16 r r d r r d r r d r r d d r8
     }
   }
@@ -112,8 +112,8 @@ mel = \relative c'' {
   d4-. r4. d8. d
   f4-. r4. f8. f
   e4-. r4. e8. e
-  es8.-.-> es-.-> es-.-> es-.-> es16-> es r8
-  es8.-.-> es-.-> es-.-> es-.-> es16-> es r8
+  es8.-.-> es-.-> es8-> r es-> es16-> es r8
+  es8.-.-> es-.-> es8-> r es-> es16-> es r8
   _\markup{D.S.}
 
   \repeat volta 4 {
@@ -132,8 +132,8 @@ mel = \relative c'' {
   bes4-. r4. a8. a
   d4-. r4. d8. d
   bes4-. r4. a8. a
-  f'8.-.-> f-.-> f-.-> f-.-> f16-> f r8
-  f8.-.-> f-.-> f-.-> f-.-> f16-> f r8
+  f'8.-.-> f-.-> f8-> r f-> f16-> f r8
+  f8.-.-> f-.-> f8-> r f-> f16-> f r8
   \repeat volta 4 {
     s1
     %^\markup{\hspace #-3.0 \italic{as in A}}
@@ -149,8 +149,8 @@ mel = \relative c'' {
   }
   \repeat volta 2 {
     \repeat percent 2 {
-      f8. f f f r16 fis8.
-      f8. f f fis r16 fis8.
+      f8. f f8 r f r16 fis8.
+      f8. f f8 r f r16 fis8.
       ^\markup{\italic cue}
     }
   }
