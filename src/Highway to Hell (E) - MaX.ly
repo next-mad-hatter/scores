@@ -10,7 +10,7 @@
 \header {
   title = "Highway to Hell"
   subtitle = "-8va"
-  subsubtitle = "in A major"
+  subsubtitle = "in E major"
 
   composer = "AC/DC"
   poet = ""
@@ -71,7 +71,7 @@ mel = \relative c'' {
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
 
-  \key a \major
+  \key e \major
   \time 4/4
 
   \partial 4.
@@ -155,7 +155,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose a e {
     <<
       \harm
       \mel
