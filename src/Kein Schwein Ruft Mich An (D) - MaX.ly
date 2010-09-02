@@ -10,7 +10,7 @@
 \header {
   title = "Kein Schwein ruft mich an"
   %subtitle = "+8va"
-  subsubtitle = "+8va" %"in C major"
+  subsubtitle = "+8va" %"in D major"
 
   composer = "Max Raabe & Co"
   poet = ""
