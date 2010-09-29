@@ -10,7 +10,7 @@
 \header {
   title = "Oj oj oj"
   subtitle = "...А я обычная девчёночка"
-  subsubtitle = "in A minor"
+  subsubtitle = "in B minor"
 
   composer = "as performed by La Minor"
   poet = ""
@@ -109,7 +109,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c d {
+  \transpose a b {
     <<
       \harm
       \mel

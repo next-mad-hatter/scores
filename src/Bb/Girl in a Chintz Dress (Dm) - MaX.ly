@@ -10,7 +10,7 @@
 \header {
   title = "Girl In A Chintz Dress"
   subtitle = "Девушка в платье из ситца"
-  subsubtitle = "in C minor"
+  subsubtitle = "in D minor"
 
   composer = "as performed by La Minor"
   poet = ""

@@ -10,7 +10,7 @@
 \header {
   title = "Resnitzy"
   subtitle = "Ресницы"
-  subsubtitle = "in C minor"
+  subsubtitle = "in D minor"
 
   composer = "as performed by La Minor"
   poet = ""
