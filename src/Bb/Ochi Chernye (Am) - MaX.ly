@@ -66,7 +66,7 @@ mel = \relative c'' {
   \key c \minor
   \time 4/4
 
-  \partial 4 fis,8 g |
+  \partial 4 fis,,8 g |
   as4 g8 g ~ g4 bes8 as |
   as4 g8 g ~ g4 g8 c |
   c4 b8 b ~ b4 d8 es |
@@ -105,7 +105,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c f {
+  \transpose c a {
     <<
       \harm
       \mel
