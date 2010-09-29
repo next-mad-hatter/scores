@@ -10,7 +10,7 @@
 \header {
   title = "Ochi Chernye"
   subtitle = "Очи чёрные"
-  subsubtitle = "in F minor"
+  subsubtitle = "in A minor"
 
   composer = "Florian Hermann"
   poet = "Евгений Гребёнка"
