@@ -16,7 +16,7 @@
   poet = ""
   enteredby = "Max Deineko"
 
-  meter = "116 bpm"
+  %meter = "116 bpm"
   piece = "rock"
   version = "$Revision$"
 
@@ -52,12 +52,12 @@ harm = \chords {
   g4:m s4. a:7 d1:9+ s1 |
   d1:9+ s1*3 |
 
-  \break
   \mark \markup {\box \bold "A'"}
   d1:9+ s1*3 |
 
   %\mark \markup{ \musicglyph #"scripts.coda" }
   %\break
+  \break
   \mark \markup {\box \bold "Outro"}
 
   d4:9+ s2 s16 es8.:9+ |
@@ -74,6 +74,7 @@ mel = \relative c'' {
 
   \key d \minor
   \time 4/4
+  \tempo 4 = 116
 
   \override NoteHead #'style = #'diamond
 
@@ -115,7 +116,7 @@ mel = \relative c'' {
   e4-. r4. e8. e
   es8.-.-> es-.-> es8-> r es-> es16-> es r8
   es8.-.-> es-.-> es8-> r es-> es16-> es r8
-  _\markup{D.S.}
+  _\markup \bold { D.S. }
 
   \repeat volta 4 {
     s1
@@ -159,7 +160,7 @@ mel = \relative c'' {
   f-> r \fermata
   f1-> \fermata
 
-  \bar "||"
+  \bar "|."
 }
 
 bass = \relative c {
@@ -213,7 +214,7 @@ bass = \relative c {
 }
 
 \layout {
-  ragged-last = ##t
+  ragged-last = ##f
   \context {
     \RemoveEmptyStaffContext
     \override VerticalAxisGroup #'remove-first = ##t
