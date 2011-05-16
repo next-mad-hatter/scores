@@ -152,12 +152,30 @@ mel = \relative c' {
   e e e e e e e e e e e e e e e e |
   \repeat volta 2 {
     fis16 \! \f e fis e a8 fis16 e fis16 e fis8 r4 |
-    fis16 e fis e a8 fis16 e fis16 e cis' a c a b a _\markup{\hspace #-24.0 \italic{solo till cue, then} \bold { D.S. al coda}} |
+    fis16 e fis e a8 fis16 e fis16 e cis' a c a b a _\markup{\hspace #-33.0 \italic{solo till cue, then} \bold { D.S. con rep. al coda}} |
   }
 
   r8 \ff b-> bes-> a-> r2 |
 
   \bar "|."
+}
+
+\markup {
+    \fill-line { % This centers the words, which looks nicer
+    \hspace #1.0 % gives the fill-line something to work with
+    \rounded-box \pad-markup #0.3 {
+      \column {
+        \line{
+          \hspace #0.5
+          \smallCaps Form:
+          \hspace #1
+          Intro A B1 A B2 A' C A' Coda
+          \hspace #0.5
+        }
+      }
+    }
+    \hspace #1.0 % gives the fill-line something to work with
+  }
 }
 
 \score {
