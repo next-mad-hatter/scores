@@ -21,7 +21,7 @@
   version = "$Revision$"
 
   copyright = "" % "Transcribed and/or arranged by MaX"
-  tagline = "$Revision$" % ""
+  tagline = "$Date$" % ""
 }
 
 
