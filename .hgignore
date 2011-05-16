@@ -1,13 +1,5 @@
 syntax: glob
 
 pub/*
-src/*.ps
-src/*.pdf
-*.flac*
-*.ogg*
-*.mp3*
-*.wav*
-*.mp4*
-*.MP4*
 *~
 *.swp

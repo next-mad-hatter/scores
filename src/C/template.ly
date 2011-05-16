@@ -20,8 +20,8 @@
   piece = "tango"
   version = "$Revision$"
 
-  copyright = "Transcribed and/or arranged by MaX"
-  tagline = "" % or leave the lilypond line
+  copyright = "" % "Transcribed and/or arranged by MaX"
+  tagline = "$Revision$" % ""
 }
 
 
@@ -31,7 +31,7 @@ harm = \chords {
 
 }
 
-mel = \relative c'' {
+mel = \relative c' {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
@@ -40,6 +40,24 @@ mel = \relative c'' {
   \time 4/4
 
   \bar "||"
+}
+
+\markup {
+    \fill-line { % This centers the words, which looks nicer
+    \hspace #1.0 % gives the fill-line something to work with
+    \rounded-box \pad-markup #0.3 {
+      \column {
+        \line{
+          \hspace #0.5
+          \smallCaps Form:
+          \hspace #1
+          [: A :] \super \small \italic cue Coda
+          \hspace #0.5
+        }
+      }
+    }
+    \hspace #1.0 % gives the fill-line something to work with
+  }
 }
 
 \score {

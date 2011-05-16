@@ -10,18 +10,18 @@
 \header {
   title = "Lazy"
   subtitle = ""
-  subsubtitle = "in G minor, A minor and, finally, B minor"
+  subsubtitle = "in F minor, G minor and, finally, A minor"
 
   composer = "Deep Purple MkII"
   poet = ""
   enteredby = "Max Deineko"
 
   meter = "180-190 bpm"
-  piece = "uptempo shuffle jazz blues"
+  piece = "uptempo shuffle rock blues"
   version = "$Revision$"
 
-  copyright = "Transcribed and/or arranged by MaX"
-  tagline = "" % or leave the lilypond line
+  copyright = "" % "Transcribed and/or arranged by MaX"
+  tagline = "$Date$" % ""
 }
 
 
@@ -109,7 +109,7 @@ harm = \chords {
 
   e1.:7 d
   a
-  a4. bes4:9 a8:9 r2.
+  a4. bes4:9 a8:9 s2.
   \bar "||"
 }
 
@@ -125,8 +125,8 @@ mel = \relative c' {
 
   \override NoteHead #'style = #'diamond
 
-  f4->\!_\markup{\italic { drums: chh @ offbeat + accents & fills } }
-  r2. | R1 * 3 |
+  f4->\mf \!  r2.  _\markup \italic { drums: chh @ offbeat + accents & fills } |
+  R1 * 3 |
   b8-> bes-> r2. r1
 
   \repeat volta 2 {
@@ -142,14 +142,14 @@ mel = \relative c' {
 
   \override NoteHead #'style = #'diamond
   \repeat percent 2 {
-    bes4_\markup{\italic{gtr: etc}}-> r2. r1
+    bes4_\markup{\italic{gtr: fills}}-> r2. r1
   }
   \repeat percent 2 {
     f4-> r2. r1
   }
   \override NoteHead #'style = #'default
 
-  f4 as8 f bes as f es as f bes as f r f'4-> ~
+  f4\f ^\markup { \musicglyph #"scripts.segno" } as8 f bes as f es as f bes as f r f'4-> ~
   \time 2/4 f2 ~ \time 4/4 f2 r
   f4 es8 c es4 c8 b  c f c b bes as f es f r f'4-> ~
   f2 ~ f1
@@ -159,7 +159,7 @@ mel = \relative c' {
   \repeat volta 2 {
     s1_\markup{\italic { backbeat } }
     s1 * 9
-    s1^\markup{\italic { gtr solo till cue } }_\markup{ \italic { for keys solo: } \bold { Del A1 } }
+    s1^\markup{\italic { gtr solo till cue } }_\markup{ \italic { for keys solo: } \bold { D.S. } }
     s1 * 1
   }
 
@@ -216,16 +216,13 @@ mel = \relative c' {
       r4 r1
     }
   }
-  s1._\markup{ \italic { blues shuffle } }
-  s1.
-  s1.
-  a4.->_\markup{ \italic { blues ending } }
-  bes4-> a8-> ~ a2\fermata ~ a4->
+  s1._\markup{ \italic { blues shuffle } } s1.  s1. |
+  a4.-> bes4-> a8-> ~ a2\fermata ~ a4->
 
 }
 
 \score {
-  \transpose g a {
+  \transpose c c {
     <<
       \harm
       \mel
