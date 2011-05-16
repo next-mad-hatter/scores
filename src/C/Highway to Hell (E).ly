@@ -10,7 +10,7 @@
 \header {
   title = "Highway to Hell"
   subtitle = "-8va"
-  subsubtitle = "in A major"
+  subsubtitle = "in E major"
 
   composer = "AC/DC"
   poet = ""
