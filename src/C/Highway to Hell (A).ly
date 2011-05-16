@@ -145,6 +145,24 @@ mel = \relative c'' {
   \bar "|."
 }
 
+\markup {
+    \fill-line { % This centers the words, which looks nicer
+    \hspace #1.0 % gives the fill-line something to work with
+    \rounded-box \pad-markup #0.3 {
+      \column {
+        \line{
+          \hspace #0.5
+          \smallCaps Form:
+          \hspace #1
+          Intro A B A B Coda [: Solos & Refs on B :]
+          \hspace #0.5
+        }
+      }
+    }
+    \hspace #1.0 % gives the fill-line something to work with
+  }
+}
+
 \score {
   \transpose c c {
     <<
