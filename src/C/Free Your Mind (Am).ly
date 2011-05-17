@@ -93,7 +93,7 @@ mel = \relative c'' {
 
   \repeat volta 4 {
     \repeat percent 4 {
-      a8 \f g _\markup{\italic{backbeat, gtr & bass unisono}} gis a r2^\markup {\hspace #70.0 \italic "×4"} |
+      a8 \f g _\markup{\italic{backbeat, gtr & bass unisono}} gis a r2^\markup {\hspace #78.0 \italic "×4"} |
     }
   }
 
@@ -134,10 +134,12 @@ mel = \relative c'' {
 
   \repeat percent 3 { a8_\markup{\italic solo} g gis a r2 | }
   \override TextSpanner #'(bound-details left text) = \markup { \italic "unisono" }
-  a,16 \startTextSpan g' a a, g' a a, g' g a, g' a d cis c8 \stopTextSpan
+      \ottava #1
+  a16 \startTextSpan g' a a, g' a a, g' g a, g' a d cis c8 \stopTextSpan
+      \ottava #0
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r ^\markup{\hspace #33.0 \italic{till cue}}
+      a,8 e g a c c a g a e g a c c a r ^\markup{\hspace #33.0 \italic{till cue}}
       _\markup \bold { \hspace #30.0 D.S. al Coda 2 }
       |
     }
