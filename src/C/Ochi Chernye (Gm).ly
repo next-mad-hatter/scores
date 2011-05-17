@@ -1,8 +1,8 @@
-\version "2.12.3"
+\version "2.13.46"
 
 %
 % $File$
-% $HGDate: Tue, 01 Jun 2010 00:41:20 +0200 $
+% $Date$
 % $Revision$
 % $Author$
 %
@@ -10,63 +10,56 @@
 \header {
   title = "Ochi Chernye"
   subtitle = "Очи чёрные"
-  subsubtitle = "in G minor"
+  subsubtitle = "Les Yeux Noirs"
 
-  composer = "Florian Hermann"
-  poet = "Евгений Гребёнка"
+  composer = "F. Hermann"
+  poet = "Е. Гребёнка"
   enteredby = "Max Deineko"
 
-  meter = "180 bpm"
-  piece = "tempo twisting eastern european ballad"
-  version = "0.1"
+  %meter = "180 bpm"
+  piece = "" %"tempo twisting eastern european ballad"
+  version = "$Revision$"
 
-  copyright = "Transcribed by MaX"
-  tagline = "" % or leave the lilypond line
+  copyright = "" % "Transcribed and/or arranged by MaX"
+  tagline = "$Date$" % ""
 }
 
 
-harm = \chords {
+harmA = \chords {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
 
-  \partial 4 r4 |
+  \partial 4 s4 |
 
-  \mark \markup {\box \bold "A"}
-  \bar "||"
-
-  g1:7 | c:m | g:7 | as:maj |
-  \repeat volta 2 { f:m6 | c:m }
-  \alternative{{ g:7 as:maj }{ g:7 c:m }}
-
-  \bar "||:"
-  %\break
-
-  \mark \markup {\box \bold "B"}
-
-  \repeat volta 2 {
-    g1:7 c:m g:7 c:m g1:7 c:m g:7
-  }
-  \alternative{{ c2:m bes4 as }{ c1:m }}
-
-  \bar "||:"
-  %\break
-
-  \mark \markup { \musicglyph #"scripts.coda" }
-
-  \repeat volta 2 { f2:m c:m | g:7 c:m | f:m6 c:m }
-  \alternative{{ g:7 c:7 }{ g:7 c:m }}
-
-  \bar "|."
+  g1:7 c:m | g:7 as:maj |
+  f:m6 c:m | g:7 as:maj | g:7 c:m |
 }
 
-mel = \relative c'' {
+harmB = \chords {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
+
+  g1:7 c:m g:7 c:m |
+  g:7 c:m | g:7 c2:m bes4 as c1:m |
+}
+
+harmC = \chords {
+  \set Score.skipBars = ##t
+  \set Score.markFormatter = #format-mark-box-letters
+
+  %\mark \markup { \musicglyph #"scripts.coda" }
+  f2:m c:m | g:7 c:m | f:m6 c:m | g:7 c:7 | g:7 c:m |
+}
+
+melA = \relative c {
+  \set Score.skipBars = ##t
+  \set Score.markFormatter = #format-mark-box-letters
+  \set Staff.instrumentName = \markup {\box \bold "A"}
 
   \key c \minor
   \time 4/4
 
-  \partial 4 fis,8 g |
+  \partial 4 fis8 g |
   as4 g8 g ~ g4 bes8 as |
   as4 g8 g ~ g4 g8 c |
   c4 b8 b ~ b4 d8 es |
@@ -84,6 +77,16 @@ mel = \relative c'' {
       d4 c8 c ~ c4 r4 |
     }
   }
+  \bar "||"
+}
+
+melB = \relative c' {
+  \set Score.skipBars = ##t
+  \set Score.markFormatter = #format-mark-box-letters
+  \set Staff.instrumentName = \markup {\box \bold "B"}
+
+  \key c \minor
+  \time 4/4
 
   \repeat volta 2 {
     g4 b d f | as g8 g8 ~ g g f es |
@@ -91,7 +94,17 @@ mel = \relative c'' {
     g,4 b d f | as g8 g8 ~ g g f es |
     g4 f8 f r f es d |
   }
-  \alternative{{ c4 c, bes as }{ c4 g c r }}
+  \alternative{{ c4 c bes as }{ c4 g c r }}
+  \bar "||"
+}
+
+melC = \relative c {
+  \set Score.skipBars = ##t
+  \set Score.markFormatter = #format-mark-box-letters
+  \set Staff.instrumentName = \markup {\bold \musicglyph #"scripts.coda" }
+
+  \key c \minor
+  \time 4/4
 
   \repeat volta 2 {
     bes''16 as g as bes as g as
@@ -102,44 +115,69 @@ mel = \relative c'' {
     d c b d d c b c |
   }
   \alternative{{ c8 b a b c bes'4. }{ c,8 b a b c8-> g-> c-> r }}
+  \bar "||"
+}
+
+\markup {
+    \fill-line { % This centers the words, which looks nicer
+    \hspace #1.0 % gives the fill-line something to work with
+    \center-column {
+      \rounded-box \pad-markup #0.3 {
+        \column {
+          \line {
+            \hspace #0.5
+            \smallCaps Form:
+            \hspace #1
+            [: A :] [: B :] A Coda
+            \hspace #0.5
+          }
+        }
+      }
+      \line {
+        \italic { vocalist provides cues & tempo }
+      }
+      \vspace #0.2
+    }
+    \hspace #1.0 % gives the fill-line something to work with
+  }
 }
 
 \score {
   \transpose c g {
     <<
-      \harm
-      \mel
+      \harmA
+      \melA
     >>
   }
-}
-
-\markup {
-  \huge{
-    \hspace #2.0
-    \smallCaps{ Form: }
-    \hspace #2.0
-    \bracket{
-      \line{ : \hspace #0.1 \bold{A} \hspace #0.1 : }
-    }
-    \hspace #0.2
-    \bracket{
-      \line{ : \hspace #0.1 \bold{B} \hspace #0.1 : }
-    }
-    \hspace #0.2
-    \bold{A}
-    \hspace #0.2
-    \bold{Coda}
+  \layout {
+    ragged-last = ##f
   }
 }
 
-\markup {
-  \huge{
-    \hspace #2.0
-    \smallCaps{ Vocalist provides cues & tempi }
-    \hspace #2.0
+\score {
+  \transpose c g {
+    <<
+      \harmB
+      \melB
+    >>
+  }
+  \layout {
+    ragged-last = ##f
+  }
+}
+
+\score {
+  \transpose c g {
+    <<
+      \harmC
+      \melC
+    >>
+  }
+  \layout {
+    ragged-last = ##f
   }
 }
 
 \layout {
-  ragged-last = ##t
+  ragged-last = ##f
 }

@@ -74,6 +74,7 @@ mel = \relative c'' {
 
   \key d \minor
   \time 4/4
+  \cleaf treble
   \tempo 4 = 116
 
   \override NoteHead #'style = #'diamond
