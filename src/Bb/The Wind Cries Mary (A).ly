@@ -10,7 +10,7 @@
 \header {
   title = "The Wind Cries Mary"
   subtitle = ""
-  subsubtitle = "in G major"
+  subsubtitle = "in A major"
 
   composer = "Jimi Hendrix"
   poet = ""
@@ -107,7 +107,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose g g {
+  \transpose c d {
     <<
       \harm
       \mel

@@ -10,7 +10,7 @@
 \header {
   title = "Highway to Hell"
   subtitle = "-8va"
-  subsubtitle = "in A major"
+  subsubtitle = "in Fis major"
 
   composer = "AC/DC"
   poet = ""
@@ -74,10 +74,10 @@ mel = \relative c'' {
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
 
+  \clef treble
   \key a \major
   \time 4/4
   \tempo 4 = 117
-  \clef treble
 
   \partial 4. <a e' a>8 \f <a e' a> _\markup \italic {gtr} <a e' a> |
 
@@ -165,7 +165,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose a fis {
     <<
       \harm
       \mel

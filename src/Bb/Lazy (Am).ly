@@ -10,7 +10,7 @@
 \header {
   title = "Lazy"
   subtitle = ""
-  subsubtitle = "in F minor, G minor and, finally, A minor"
+  subsubtitle = "in G minor, A minor and, finally, B minor"
 
   composer = "Deep Purple MkII"
   poet = ""
@@ -223,7 +223,7 @@ mel = \relative c' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

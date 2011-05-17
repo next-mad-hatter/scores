@@ -10,7 +10,7 @@
 \header {
   title = "Free You Mind"
   subtitle = "-8va"
-  subsubtitle = "in A minor"
+  subsubtitle = "in B minor"
 
   composer = "D. Foster, T. McElroy"
   poet = ""
@@ -178,7 +178,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

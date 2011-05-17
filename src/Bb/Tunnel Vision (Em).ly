@@ -10,7 +10,7 @@
 \header {
   title = "Tunnel Vision"
   subtitle = ""
-  subsubtitle = "in D minor"
+  subsubtitle = "in E minor"
 
   composer = "Lenny Kravitz"
   poet = ""
@@ -205,7 +205,7 @@ bass = \relative c {
 }
 
 \score {
-  \transpose g g {
+  \transpose c d {
     \new StaffGroup = "intro" <<
       \new ChordNames = "chords" \harm
       \new Staff = "guitar" \mel

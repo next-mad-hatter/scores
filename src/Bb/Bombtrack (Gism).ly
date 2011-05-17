@@ -10,7 +10,7 @@
 \header {
   title = "Bombtrack"
   subtitle = "-8va"
-  subsubtitle = "in F# minor"
+  subsubtitle = "in G# minor"
 
   composer = "Rage Against The Machine"
   poet = ""
@@ -180,7 +180,7 @@ mel = \relative c' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

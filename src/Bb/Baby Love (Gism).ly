@@ -10,7 +10,7 @@
 \header {
   title = "Baby Love"
   subtitle = ""
-  subsubtitle = "in F# minor"
+  subsubtitle = "in G# minor"
 
   composer = "Mother's Finest"
   poet = ""
@@ -244,7 +244,7 @@ mel = \relative c, \new Staff = "main" {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

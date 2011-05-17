@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.13.46"
 
 %
 % $File$
@@ -18,7 +18,7 @@
 
   meter = "133 bpm"
   piece = "tango"
-  version = "$HGRevision$"
+  version = "$Revision$"
 
   copyright = "Transcribed and/or arranged by MaX"
   tagline = "" % or leave the lilypond line
@@ -111,6 +111,7 @@ mel = \relative c'' {
 
   \key c \major
   \time 4/4
+  \clef treble
 
   \override NoteHead #'style = #'cross
   g'4_\mf

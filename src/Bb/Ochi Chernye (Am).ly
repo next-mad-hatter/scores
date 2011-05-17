@@ -146,7 +146,7 @@ melC = \relative c {
 }
 
 \score {
-  \transpose c g {
+  \transpose c a {
     <<
       \harmA
       \melA
@@ -158,7 +158,7 @@ melC = \relative c {
 }
 
 \score {
-  \transpose c g {
+  \transpose c a {
     <<
       \harmB
       \melB
@@ -170,7 +170,7 @@ melC = \relative c {
 }
 
 \score {
-  \transpose c g {
+  \transpose c a {
     <<
       \harmC
       \melC

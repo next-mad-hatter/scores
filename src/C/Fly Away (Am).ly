@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.13.46"
 
 %
 % $File$
@@ -48,6 +48,7 @@ mel = \relative c'' {
 
   \key a \minor
   \time 4/4
+  \clef treble
 
   \override NoteHead #'style = #'diamond
 

@@ -10,7 +10,7 @@
 \header {
   title = "Highway to Hell"
   subtitle = "-8va"
-  subsubtitle = "in A major"
+  subsubtitle = "in B major"
 
   composer = "AC/DC"
   poet = ""
@@ -165,7 +165,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

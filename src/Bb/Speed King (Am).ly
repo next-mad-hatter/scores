@@ -10,7 +10,7 @@
 \header {
   title = "Speed King"
   subtitle = "5-chords throughout, -8va"
-  subsubtitle = "hence in G minor"
+  subsubtitle = "hence in A minor"
 
   composer = "Deep Purple MkII"
   poet = ""
@@ -160,7 +160,7 @@ mel = \relative c' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

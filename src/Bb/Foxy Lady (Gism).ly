@@ -10,7 +10,7 @@
 \header {
   title = "Fox(e)y Lady"
   subtitle = ""
-  subsubtitle = "in F# minor"
+  subsubtitle = "in G# minor"
 
   composer = "The Jimi Hendrix Experience"
   poet = ""
@@ -99,7 +99,7 @@ mel = \relative c' {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel

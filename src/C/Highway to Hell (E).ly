@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.13.46"
 
 %
 % $File$
@@ -74,6 +74,7 @@ mel = \relative c'' {
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
 
+  \clef treble
   \key a \major
   \time 4/4
   \tempo 4 = 117

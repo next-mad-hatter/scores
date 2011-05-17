@@ -10,7 +10,7 @@
 \header {
   title = "Free You Mind"
   subtitle = "-8va"
-  subsubtitle = "in A minor"
+  subsubtitle = "in G minor"
 
   composer = "D. Foster, T. McElroy"
   poet = ""
@@ -69,10 +69,10 @@ mel = \relative c'' {
   \set Score.markFormatter = #format-mark-box-letters
   \override Staff.TimeSignature #'style = #'()
 
-  \clef treble
   \key c \major
   \time 4/4
   \tempo 4 = 102
+  \clef treble
 
   \repeat volta 2 {
     \repeat percent 2 {
@@ -94,7 +94,7 @@ mel = \relative c'' {
 
   \repeat volta 4 {
     \repeat percent 4 {
-      a8 \f g _\markup{\italic{backbeat, gtr & bass unisono}} gis a r2^\markup {\hspace #78.0 \italic "×4"} |
+      a8 \f g _\markup{\italic{backbeat, gtr & bass unisono}} gis a r2^\markup {\hspace #74.0 \italic "×4"} |
     }
   }
 
@@ -121,7 +121,7 @@ mel = \relative c'' {
   }
 
   \repeat volta 2 {
-    \repeat percent 2 { a8 e g a c c a g a e g a c c a r ^\markup { \hspace #40.0 \musicglyph #"scripts.coda" \sub \bold 1} | }
+    \repeat percent 2 { a8 e g a c c a g a e g a c c a r ^\markup { \hspace #38.0 \musicglyph #"scripts.coda" \sub \bold 1} | }
   }
 
   \repeat percent 4 { a8 _\markup \italic{ no bass } a a a a a a a | }
@@ -129,19 +129,17 @@ mel = \relative c'' {
     \repeat percent 4 { a8 _\markup \italic{ add bass } g gis a r2 | }
   }
   a4->_\markup{\italic break} r2. |
-  \repeat percent 3 { a8 g gis a r2 _\markup \bold{\hspace #12.0 D.S. con rep. al Coda 1} | }
+  \repeat percent 3 { a8 g gis a r2 _\markup \bold{\hspace #11.0 D.S. con rep. al Coda 1} | }
 
   a4->_\markup{\italic break} r2. r1 |
 
   \repeat percent 3 { a8_\markup{\italic solo} g gis a r2 | }
   \override TextSpanner #'(bound-details left text) = \markup { \italic "unisono" }
-  \ottava #1
   a16 \startTextSpan g' a a, g' a a, g' g a, g' a d cis c8 \stopTextSpan
-  \ottava #0
   \repeat volta 2 {
     \repeat percent 2 {
       a,8 e g a c c a g a e g a c c a r ^\markup{\hspace #33.0 \italic{till cue}}
-      _\markup \bold { \hspace #30.0 D.S. al Coda 2 }
+      _\markup \bold { \hspace #28.0 D.S. al Coda 2 }
       |
     }
   }
@@ -149,7 +147,7 @@ mel = \relative c'' {
   d4. \startTextSpan cis c4 ~ c8 b4. bes2 ~ | bes1 ~ bes1 \stopTextSpan |
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r^\markup{\hspace #26.0 \italic{×4}}
+      a8 e g a c c a g a e g a c c a r^\markup{\hspace #24.0 \italic{×4}}
     }
   }
   a4->_\markup{\italic break} r2. r1\fermata
@@ -178,7 +176,7 @@ mel = \relative c'' {
 }
 
 \score {
-  \transpose c c {
+  \transpose a g {
     <<
       \harm
       \mel

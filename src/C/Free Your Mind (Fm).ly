@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.13.46"
 
 %
 % $File$
@@ -72,6 +72,7 @@ mel = \relative c'' {
   \key c \major
   \time 4/4
   \tempo 4 = 102
+  \clef treble
 
   \repeat volta 2 {
     \repeat percent 2 {
@@ -146,7 +147,7 @@ mel = \relative c'' {
   d4. \startTextSpan cis c4 ~ c8 b4. bes2 ~ | bes1 ~ bes1 \stopTextSpan |
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r^\markup{\hspace #24.0 \italic{×8}}
+      a8 e g a c c a g a e g a c c a r^\markup{\hspace #24.0 \italic{×4}}
     }
   }
   a4->_\markup{\italic break} r2. r1\fermata

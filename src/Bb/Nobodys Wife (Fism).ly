@@ -10,7 +10,7 @@
 \header {
   title = "Nobody's Wife"
   subtitle = ""
-  subsubtitle = "in E minor"
+  subsubtitle = "in F# minor"
 
   composer = "Satindra Kalpoe, Bart van Veen, Anouk Teeuwe "
   poet = ""
@@ -169,7 +169,7 @@ mel = \relative c {
 }
 
 \score {
-  \transpose c c {
+  \transpose c d {
     <<
       \harm
       \mel
