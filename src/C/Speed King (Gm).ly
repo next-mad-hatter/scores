@@ -20,8 +20,8 @@
   piece = "lively rock"
   version = "$Revision$"
 
-  copyright = "Transcribed and/or arranged by MaX"
-  tagline = "" % or leave the lilypond line
+  copyright = "" % "Transcribed and/or arranged by MaX"
+  tagline = "$Date$" % ""
 }
 
 
@@ -84,12 +84,12 @@ harm = \chords {
   s1 * 5
   bes1 f
   g1 s
-  g4 r2 f4
-  g4 r2 f4
-  g4 r2 f4
+  g4 s2 f4
+  g4 s2 f4
+  g4 s2 f4
   g1
 
-  \bar "||"
+  \bar "|."
 }
 
 mel = \relative c' {
@@ -103,42 +103,32 @@ mel = \relative c' {
   \override NoteHead #'style = #'diamond
 
   \partial 2
-
   \override NoteHead #'style = #'cross
   d'4
   \override NoteHead #'style = #'diamond
   f,4\f %^\markup{\italic{ 5-chords throughout }}
 
   \repeat volta 4 {
-    g4->_\markup{\small{\italic{3. & 4.: let }Is\italic{ring, rock bass 8ths ostinato}}}
-    r r f->
-    g-> r r f->
-    g c bes g8 f
+    g4-> _\markup \italic { dr: rock backbeat }
+    _\markup { \italic { rest: 1.,2.: unisono, 3., 4.: let }Is\italic{ring, rock bass 8ths ostinato} }
+    r r f-> g-> r r f-> g c bes g8 f |
   }
-  \alternative {
-    {
-      g4-> r r f->
-    }
-    {
-      g4-.
-      \override NoteHead #'style = #'default
-      bes2.->
-    }
-  }
+  \alternative { { g4-> r r f-> } { g4-. \override NoteHead #'style = #'default bes2.-> _\markup \italic { break } } }
 
-  \repeat percent 3 {
-    c8 bes c bes c4 bes8 c ~ c8 e,4 f fis g8
-  }
+  \repeat percent 3 { c8 bes c bes c4 bes8 c ~ c8 e,4 f fis g8 }
   \override NoteHead #'style = #'diamond
   bes1 f1
-  #(set-octavation 1)
+  \override TextSpanner #'(bound-details left text) = \markup { \italic "unisono" }
+  \textSpannerDown
+  \ottava #1
   \override NoteHead #'style = #'default
-  c'8 c'4-> c,8 bes'4-> c,8 g'8-> ~ g c,8 f4-> es
+  c'8 \startTextSpan c'4-> c,8 bes'4-> c,8 g'8-> ~ g c,8 f4-> es
   \override NoteHead #'style = #'diamond
-  #(set-octavation 0)
+  \ottava #0
   bes->^\markup { \small \bold {al coda }}
-  c4_\markup{\italic{drum fill}}->
-  r2. r2. f,4->_\markup{\hspace #2.0 D.S.}
+  c4_\markup{\italic{break & fill}}-> \stopTextSpan
+  r2. r2. f,4->_\markup{\hspace #3.0 \bold D.S.}
+  \bar "||"
 
   g1\mf\> ~ g2. f4
   g1 ~ g2. f4\!
@@ -151,27 +141,22 @@ mel = \relative c' {
   \repeat percent 2 { d'1\mf\! ~ d }
   \repeat percent 2 { d4. c8 ~ c4 d ~ d1 }
   \repeat percent 2 { d4. c8 ~ c4 d ~ d8 c8 ~ c4 d c }
-  \repeat volta 2 { d,4.\< e8 ~ e4 f ~ f8 fis8 ~ fis4 g gis
-                    a4. bes8 ~ bes4 b ~ b8 c8 ~ c4\ff\! cis_\markup{D.S. al coda } d
-                  }
+  \repeat volta 2 {
+    d,4.\< e8 ~ e4 f ~ f8 fis8 ~ fis4 g gis
+    a4. bes8 ~ bes4 b ~ b8 c8 ~ c4\ff\! cis_\markup \bold { D.S. al coda } d
+  }
 
   \override NoteHead #'style = #'default
   \repeat volta 2 {
-    \repeat percent 3 {
-      c8 bes c bes c4 bes8 c ~ c8 e,4 f fis g8
-    }
+    \repeat percent 3 { c8 bes c bes c4 bes8 c ~ c8 e,4 f fis g8 }
     \override NoteHead #'style = #'diamond
     bes1 f1
   }
   \alternative {
-    {
-      g4_\markup{\italic{break}}-> r2. r1
-    }
-    {
-      g4-> r r f-> g-> r r f-> g-> r r f-> g1->\fermata
-    }
+    { g4_\markup{\italic{break}}-> r2. r1 }
+    { g4-> \startTextSpan r r f-> }
   }
-
+  g-> r r f-> g-> r r f-> g1->\fermata \stopTextSpan
 }
 
 \score {
