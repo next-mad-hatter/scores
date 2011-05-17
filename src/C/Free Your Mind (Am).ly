@@ -134,9 +134,9 @@ mel = \relative c'' {
 
   \repeat percent 3 { a8_\markup{\italic solo} g gis a r2 | }
   \override TextSpanner #'(bound-details left text) = \markup { \italic "unisono" }
-      \ottava #1
+  \ottava #1
   a16 \startTextSpan g' a a, g' a a, g' g a, g' a d cis c8 \stopTextSpan
-      \ottava #0
+  \ottava #0
   \repeat volta 2 {
     \repeat percent 2 {
       a,8 e g a c c a g a e g a c c a r ^\markup{\hspace #33.0 \italic{till cue}}
