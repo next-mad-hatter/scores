@@ -9,19 +9,19 @@
 
 \header {
   title = "Free You Mind"
-  subtitle = ""
+  subtitle = "-8va"
   subsubtitle = "in A minor"
 
-  composer = "Denzil Foster, Thomas McElroy"
+  composer = "D. Foster, T. McElroy"
   poet = ""
   enteredby = "Max Deineko"
 
-  meter = "102 bpm"
+%  meter = "102 bpm"
   piece = "rock"
   version = "$Revision$"
 
-  copyright = "Transcribed and/or arranged by MaX"
-  tagline = "" % or leave the lilypond line
+  copyright = "" % "Transcribed and/or arranged by MaX"
+  tagline = "$Date$" % ""
 }
 
 
@@ -29,47 +29,39 @@ harm = \chords {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
 
-  a1:m
-  \mark \markup {\italic "cue"}
-  s1 s1
-
-  \mark \markup {\box \bold "A"}
-
-  a1:m
-  s1 * 3
-
-  \mark \markup {\box \bold "B"}
-
-  d2:m c g g:m/bes a1:m s1 a1:m s1
-
-  \mark \markup {\box \bold "C"}
-
-  a1:m s1 s1 s1
-
-  \mark \markup {\box \bold "A'"}
-
-  a1:m
-  s1 * 11
+  a1:m s1 * 3 |
 
   \break
-  \mark \markup { \musicglyph #"scripts.coda" }
+  \mark \markup {\box \bold "A"}
+  a1:m s1 * 3 |
 
-  a1:m s1
+  \break
+  \mark \markup {\box \bold "B"}
+  d2:m c g/b bes a1:m s1 a1:m s1 |
+
+  \break
+  \mark \markup {\box \bold "C"}
+  a1:m s1 s1 s1 |
+
+  \break
+  \mark \markup {\box \bold "A'"}
+  a1:m s1 * 11 |
+
+  \break
+  \mark \markup { \musicglyph #"scripts.coda" \sub \bold 1 }
+  a1:m s1 |
 
   \mark \markup {\box \bold "D"}
+  %a1:m s1*7 |
+  s1*8 |
 
-  a1:m s1*7
+  \break
+  \mark \markup { \musicglyph #"scripts.coda" \sub \bold 2 }
+  d4.:m a c g bes2 s1 s1 |
 
-  \mark \markup {\box \bold "B'"}
-
-  d2:m c g g:m/bes a1:m s1
-  d4.:m a c g bes2
-  s1 s1
-
-  \mark \markup {\box \bold "C'"}
-
-  a1:m s1 s1 s1 a:m s1
-
+  \break
+  \mark \markup {\box \bold "C" ×2}
+  a1:m s1 s1 s1 a:m s1 |
 }
 
 mel = \relative c'' {
@@ -79,99 +71,107 @@ mel = \relative c'' {
 
   \key c \major
   \time 4/4
+  \tempo 4 = 102
 
   \repeat volta 2 {
-    a8_\markup{\italic{keys only}}
-    a a a a a a a
+    \repeat percent 2 {
+      a8 \mf a _\markup{\italic{keys}} a a a a a a ^\markup{\hspace #10.0 \italic{till cue}} |
+    }
   }
 
-  a8_\markup{\italic{free your mind...}}
-  a a a a a a a
-  a8 a a a
+  a8_\markup{\italic{free your miiiind}}
+  a a a a a a a a8 a a a
   <<
-  {
+    {
       \override NoteHead #'style = #'diamond
       r g' e c
       \override NoteHead #'style = #'default
-  }
-  \\
-  { a_\markup{\italic{fill}} a a a }
+    }
+    \\
+    { a_\markup{\italic{fill}} a a a }
   >>
 
   \repeat volta 4 {
     \repeat percent 4 {
-      a8_\markup{\italic{backbeat}}
-      g gis a r2
+      a8 \f g _\markup{\italic{backbeat, gtr & bass unisono}} gis a r2^\markup {\hspace #70.0 \italic "×4"} |
     }
   }
 
+  \override TextSpanner #'(bound-details left text) = \markup { \italic "break" }
+  \textSpannerDown
   \repeat volta 2 {
-    d8^\markup {\hspace #-5.0 \italic "x4"}
-    a^\markup {\hspace #-3.0 \musicglyph #"scripts.segno"}
-    d4 c8 g c4 b8 g b4 bes8 g bes4
+    <<
+      {
+        \override NoteHead #'style = #'diamond
+        d,2 ^\markup { \bold \musicglyph #"scripts.segno" } c b bes
+        \override NoteHead #'style = #'default
+      }
+      \\
+      {
+        \clef bass
+        d,4. d8 c4. c8 b4. b8 bes4. bes8
+      }
+    >>
+    \clef treble
   }
   \alternative {
-    {
-      a8 g gis a r2
-      a8 g gis a r2
-    }
-    {
-      a4->_\markup{\italic break}
-      r2.
-      d8 fis, r g r gis r a
-    }
+    { a''8 g gis a r2 a8 g gis a r2 ^\markup { \hspace #5.0 \musicglyph #"scripts.coda" \sub \bold 2} | }
+    { a4->\startTextSpan r2. d8 fis, r g r gis r a \stopTextSpan | }
   }
 
+  \repeat volta 2 {
+    \repeat percent 2 { a8 e g a c c a g a e g a c c a r ^\markup { \hspace #40.0 \musicglyph #"scripts.coda" \sub \bold 1} | }
+  }
+
+  \repeat percent 4 { a8 _\markup \italic{ no bass } a a a a a a a | }
+  \repeat volta 2 {
+    \repeat percent 4 { a8 _\markup \italic{ add bass } g gis a r2 | }
+  }
+  a4->_\markup{\italic break} r2. |
+  \repeat percent 3 { a8 g gis a r2 _\markup \bold{\hspace #12.0 D.S. con rep. al Coda 1} | }
+
+  a4->_\markup{\italic break} r2. r1 |
+
+  \repeat percent 3 { a8_\markup{\italic solo} g gis a r2 | }
+  \override TextSpanner #'(bound-details left text) = \markup { \italic "unisono" }
+  a,16 \startTextSpan g' a a, g' a a, g' g a, g' a d cis c8 \stopTextSpan
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 %_\markup{\italic{backbeat}}
-      e g a c c a g a e g a c c a
-      r^\markup{\hspace #15.0 al coda}
+      a8 e g a c c a g a e g a c c a r ^\markup{\hspace #33.0 \italic{till cue}}
+      _\markup \bold { \hspace #30.0 D.S. al Coda 2 }
+      |
     }
   }
 
-  \repeat percent 4 {
-    a8 a a a a a a a
-  }
-  \repeat volta 2 {
-    \repeat percent 4 {
-      a8 g gis a r2
-    }
-  }
-  a4->_\markup{\italic break} r2.
-  \repeat percent 3 {
-    a8 %_\markup{\italic{backbeat}}
-    g gis a r2_\markup{\hspace #3.0 D.S. con rep al coda}
-  }
-
-  a4->_\markup{\italic break}
-  r2.
-  r1
-
-  \repeat percent 3 {
-    a8^\markup{\italic solo} g gis a r2
-  }
-  a,16 g' a a, g' a a, g' g a, g' a d cis c8
+  d4. \startTextSpan cis c4 ~ c8 b4. bes2 ~ | bes1 ~ bes1 \stopTextSpan |
   \repeat volta 2 {
     \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r^\markup{\hspace #14.0 \italic{cue}}
-    }
-  }
-
-  d8 a d4 c8 g c4 b8 g b4 bes8 g bes4
-  a8 g gis a r2
-  a8 g gis a r2
-  d4. cis c4 ~ c8 b4. bes2 ~
-  bes1 ~ bes1
-
-  \repeat volta 2 {
-    \repeat percent 2 {
-      a8 e g a c c a g a e g a c c a r^\markup{\hspace #11.0 \italic{x8/till cue}}
+      a8 e g a c c a g a e g a c c a r^\markup{\hspace #26.0 \italic{×8}}
     }
   }
   a4->_\markup{\italic break} r2. r1\fermata
 
-  \bar "||"
+  \bar "|."
+}
+
+\markup {
+    \fill-line { % This centers the words, which looks nicer
+    \hspace #1.0 % gives the fill-line something to work with
+    \rounded-box \pad-markup #0.3 {
+      \column {
+        \line{
+          \hspace #0.5
+          \smallCaps Form:
+          \hspace #1
+          A B C
+          A' B C
+          D B' C C
+          \hspace #0.5
+        }
+      }
+    }
+    \hspace #1.0 % gives the fill-line something to work with
+  }
 }
 
 \score {
