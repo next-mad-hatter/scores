@@ -21,7 +21,7 @@
   version = "$Revision$"
 
   copyright = "Transcribed and/or arranged by MaX"
-  tagline = "" % or leave the lilypond line
+  tagline = "$Revision$ " % or leave the lilypond line
 }
 
 \markup {
