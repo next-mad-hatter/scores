@@ -31,36 +31,32 @@ harm = \chordmode {
 
   \time 4/4
 
-  \repeat unfold 2 { f4:m6 as g8.:7 c16:7 s4 | }
+  \repeat unfold 2 { f4:m6 as:6.7^5 g8.:6.7^5 c16:6.7^5 s4 | }
 
-  \repeat unfold 2 { f4:m6 as g:7 c:7 | }
-  \time 6/4 f:m6 as fis f bes c |
-  \time 4/4 f4:m6 as g:7 c:7 | f1:m
+  \repeat unfold 2 { f4:m6 as:6.7^5 g c:6.7^5 | }
+  \time 6/4 f:m6 as:6.7^5 fis f bes:m6 c:7 |
+  \time 4/4 f4:m6 as:6.7^5 g:6.7^5 c:6.7^5 | f1:m6
 
   bes1:m6 f:m6 | c:7 | s |
 
-  \repeat volta 2 {
-    f2:m c:7 | f2:m c:7 |
-  }
-  \alternative {
-    { f2:m c:7 | f2:m c:7 | }
-    { f2:m bes4:7 c:7 | }
+  \repeat volta 2 { f2:m c:7 | f2:m c:7 | }
+  \alternative { { f2:m c:7 | f2:m c:7 | } { f2:m bes4:m6 c:7 | }
   }
 
-  \repeat unfold 3 { f4:m6 as g8.:7 c16:7 s4 | }
-  \time 6/4 f4:m6 as fis f bes c:7 |
-  \time 4/4 f4:m6 as g:7 c:7 | f4:m6 as g:7 c:7 |
-  f4:m6 as fis f | bes c8.:7 f16:m6 s2 |
+  \repeat unfold 3 { f4:m6 as:6.7^5 g8.:6.7^5 c16:6.7^5 s4 | }
+  \time 6/4 f4:m6 as:6.7^5 fis f bes:m6 c:7 |
+  \time 4/4 \repeat unfold 2 { f4:m6 as:6.7^5 g:6.7^5 c:6.7^5 | }
+  f4:m6 as:6.7^5 fis f | bes:m6 c8.:7 f16:m6 s2 |
 
-  \repeat unfold 3 { f4:m6 as g8.:7 c16:7 s4 | }
-  f1:m | f:m |
+  \repeat unfold 3 { f4:m6 as:6.7^5 g8.:6.7^5 c16:6.7^5 s4 | }
+  f1:m6 | f:m |
 }
 
 bass = \relative c' {
   \set Score.skipBars = ##t
   \set Score.markFormatter = #format-mark-box-letters
-  \override Staff.TimeSignature #'style = #'()
 
+  \override Staff.TimeSignature #'style = #'()
   \key f \minor
   \time 4/4
   \clef bass
@@ -81,6 +77,7 @@ bass = \relative c' {
   \mark \markup {\box \bold "A"}
   \repeat volta 2 { s1 s1 | \time 6/4 s1 s2 | \time 4/4 }
   \alternative { { s1 | }{ s1 | } }
+  \bar "||:"
 
   \break
   \mark \markup {\box \bold "B"}
@@ -104,6 +101,7 @@ bass = \relative c' {
   f,8.-. as16 ~ as8 c bes4 c
   _\markup { \hspace #3.0 \center-column { \line{ 1.: \bold D.C. } \line{ 3.: \bold { al coda } } } }
   |
+  \bar "||:"
 
   \break
   \mark \markup {\box \bold "A'"}
@@ -114,19 +112,19 @@ bass = \relative c' {
   }
   c8-. c-. c-. \times 2/3 {bes8 c16 ~ }
   c8 c,-. \times 2/3 {r8 as'16 a bes b } |
-  c8-. c-. c-. \times 2/3 {es16 c8-. } r4
+  c8-. c-. c-. \times 2/3 {es8 c16 } r4
   \times 2/3 {r8 c16 c8 bes16 } |
   \time 6/4
-  c8-. c-. es-. es-. \times 2/3 {des8-. as16 ~ as8 c16] ~ } c4
+  c8-. c es-. es \times 2/3 {des8-. as16 ~ as8 c16] ~ } c4
   \override TextSpanner #'(bound-details left text) = \markup { \upright "unisono" }
   \textSpannerDown
-  bes16_\startTextSpan a bes b c as r8_\stopTextSpan |
+  bes16_\startTextSpan a bes b c as8. \stopTextSpan |
   \time 4/4
   c8-. c-. c-. \times 2/3 {bes8 c16_\startTextSpan ~ c8-. c,16-> r8 c16-> } r4_\stopTextSpan  |
-  c'8-. c-. c-. \times 2/3 {es16 c8-. } r4
+  c'8-. c-. c-. \times 2/3 {es8 c16 } r4
   \times 2/3 {r8 c16 c8 bes16 } |
-  c8-. c-. es-. es-. des-. \times 2/3 { as8 c16] ~ } c4-. |
-  bes16 a bes b c es8 f16->_\markup{\italic{break}} r2
+  c8-. c es-. es des-. \times 2/3 { as8 c16] ~ } c4-. |
+  bes16 a bes b c es8-. f16->_\markup{\italic{break}} r2
   _\markup{ \hspace #-2.0 \bold { D.S. al coda } }
   |
 
