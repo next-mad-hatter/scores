@@ -32,19 +32,20 @@ harm = \chords {
   \partial 4.
   a4.
 
-  s2 s8 d4 g8
-  s2 s8 d4 g8
-  s8 d4 g4 d4 a8
+  s2 s8 d4/fis g8
+  s2 s8 d4/fis g8
+  s8 d4/fis g4 d4/fis a8
   s1
 
   \break
   \mark \markup {\box \bold "A"}
 
-  a2 s8 d4 g8
-  s2 s8 d4 g8
-  s8 d4 g4 d4 a8
+  a2 s8 d4/fis g8
+  s2 s8 d4/fis g8
+  s8 d4/fis g4 d4/fis a8
   s1
   e s
+
 
   \break
   \mark \markup {\box \bold "B"}
