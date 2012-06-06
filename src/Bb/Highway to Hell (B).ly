@@ -49,24 +49,24 @@ harm = \chords {
   \break
   \mark \markup {\box \bold "B"}
 
-  a2 s4. d8
-  s2 g4 d
-  d1 s2 s8 a4.
+  a2 s4. d8/a
+  s2 g4 d/fis
+  d1/fis s2 s8 a4.
 
   \break
   \mark \markup { \musicglyph #"scripts.coda" }
 
-  d4. g d4 ~ s1
-  s4. g d4 ~
-  s8 g4. d4 g
+  d4. g/d d4 ~ s1
+  d4. g/d d4 ~
+  s8 g4./d d4 g
 
   \break
   \mark \markup {\box \bold "B'"}
 
-  a2 s4. d8
-  s2 g4 d
-  d2 g4 d
-  d1 a
+  a2 s4. d8/a
+  s2 g4 d/fis
+  s2 g4 d/fis
+  d1/fis a
 }
 
 mel = \relative c'' {

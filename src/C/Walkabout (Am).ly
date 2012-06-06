@@ -75,7 +75,7 @@ mel = \relative c' {
   \bar "||:"
   \break
 
-  f4-. e-. es8.-. d16 r d8.-. | f8-. f-. e4-. es8.-. d16 r d8.-. ^\markup { \hspace #3.0 ×6 } |
+  f4-. e-. es8.-. d16 r d8.-. | f8-. f-. e4-. es8.-. d16 r d8.-. ^\markup { \hspace #3.0 ×3 } |
 
   \bar ":|"
 }
