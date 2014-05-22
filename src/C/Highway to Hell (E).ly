@@ -32,41 +32,42 @@ harm = \chords {
   \partial 4.
   a4.
 
-  s2 s8 d4 g8
-  s2 s8 d4 g8
-  s8 d4 g4 d4 a8
+  s2 s8 d4/fis g8
+  s2 s8 d4/fis g8
+  s8 d4/fis g4 d4/fis a8
   s1
 
   \break
   \mark \markup {\box \bold "A"}
 
-  a2 s8 d4 g8
-  s2 s8 d4 g8
-  s8 d4 g4 d4 a8
+  a2 s8 d4/fis g8
+  s2 s8 d4/fis g8
+  s8 d4/fis g4 d4/fis a8
   s1
   e s
+
 
   \break
   \mark \markup {\box \bold "B"}
 
-  a2 s4. d8
-  s2 g4 d
-  d1 s2 s8 a4.
+  a2 s4. d8/a
+  s2 g4 d/fis
+  d1/fis s2 s8 a4.
 
   \break
   \mark \markup { \musicglyph #"scripts.coda" }
 
-  d4. g d4 ~ s1
-  s4. g d4 ~
-  s8 g4. d4 g
+  d4. g/d d4 ~ s1
+  d4. g/d d4 ~
+  s8 g4./d d4 g
 
   \break
   \mark \markup {\box \bold "B'"}
 
-  a2 s4. d8
-  s2 g4 d
-  d2 g4 d
-  d1 a
+  a2 s4. d8/a
+  s2 g4 d/fis
+  s2 g4 d/fis
+  d1/fis a
 }
 
 mel = \relative c'' {
